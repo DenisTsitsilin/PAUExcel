@@ -24,9 +24,17 @@ public void writeIntoExcel(ArrayList <String> list){
             int rowCount = 1;
             for (String value : list) {
                 // Нумерация начинается с нуля
-                Row row = sheet.getRow(rowCount);                
+                Row row = sheet.getRow(rowCount);
                 
-                row.getCell(0).setCellValue(value);
+                PasswordGenerator passwordGenerator = new PasswordGenerator.PasswordGeneratorBuilder()
+                                                                           .useDigits(true)
+                                                                           .useLower(true)
+                                                                           .useUpper(true)
+                                                                           .build();
+                String password = passwordGenerator.generate(8);
+        
+                row.getCell(0).setCellValue(password);
+                
             }
             book.close();
         } catch (IOException iOException) {
