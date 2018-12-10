@@ -7,8 +7,7 @@
 package vstu.pauexcel;
 
 /**
- *
- * @author Admin
+ * @author Tsitsilin Denis
  */
 public class MainForm extends javax.swing.JFrame {
 

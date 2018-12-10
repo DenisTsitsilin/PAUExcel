@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * @author Tsitsilin Denis
+ */
+
 public final class PasswordGenerator {
 
     private static final String LOWER = "abcdefghijklmnopqrstuvwxyz";
