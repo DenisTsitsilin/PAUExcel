@@ -73,13 +73,9 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        PasswordGenerator passwordGenerator = new PasswordGenerator.PasswordGeneratorBuilder()
-        .useDigits(true)
-        .useLower(true)
-        .useUpper(true)
-        .build();
-        String password = passwordGenerator.generate(8);
-        jLabel1.setText(password);
+        ReportExcel reportExcel = new ReportExcel();
+        reportExcel.writeIntoExcel();
+        jLabel1.setText("Успешно выполнено");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
